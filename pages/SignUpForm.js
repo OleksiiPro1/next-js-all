@@ -1,4 +1,5 @@
 import { Box, Button, TextField } from '@mui/material';
+import Link from 'next/link';
 import React from 'react';
 import { Field } from 'react-final-form';
 
@@ -107,7 +108,7 @@ export default function SignUpForm(props) {
       >
         <Box sx={{ mt: 2, textAlign: 'center' }}>
           <Button
-            sx={{ mt: 2, textAlign: 'center' }}
+            sx={{ mt: 2 }}
             color="primary"
             type="submit"
             variant="contained"
@@ -122,6 +123,9 @@ export default function SignUpForm(props) {
         </Box>
         <Box sx={{ mt: 2, textAlign: 'center' }}>
           <span>{props.errors.email}</span>
+        </Box>
+        <Box sx={{ mt: 2, textAlign: 'right' }}>
+          <Link href="/login">Go to Login</Link>
         </Box>
       </Box>
     </Box>
