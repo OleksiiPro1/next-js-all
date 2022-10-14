@@ -28,6 +28,21 @@ export default function Home() {
             hide-elements
           </h2>
         </Link>
+
+        <Link href="/sign-up">
+          <h2
+            style={{
+              background: 'blue',
+              cursor: 'pointer',
+              textAlign: 'center',
+              color: 'white',
+              padding: 2,
+              margin: 2,
+            }}
+          >
+            sign-up
+          </h2>
+        </Link>
       </div>
     </div>
   );

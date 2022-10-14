@@ -2,6 +2,9 @@ import { Container } from '@mui/material';
 import { Form } from 'react-final-form';
 import SignUpForm from './SignUpForm';
 
+// https://mui.com/material-ui/getting-started/installation/
+// https://final-form.org/docs/react-final-form/getting-started
+
 export default function SignUp() {
   const onSubmit = (formValues) => {
     console.log(formValues);

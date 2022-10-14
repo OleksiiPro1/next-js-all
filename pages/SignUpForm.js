@@ -43,42 +43,6 @@ export default function SignUpForm(props) {
         }}
       </Field>
 
-      <Field name="company_name">
-        {(props) => {
-          return (
-            <TextField
-              required
-              fullWidth
-              label="Company Name"
-              name={props.input.name}
-              onChange={props.input.onChange}
-              value={props.input.value}
-              sx={{
-                mt: 2,
-              }}
-            />
-          );
-        }}
-      </Field>
-
-      <Field name="tax_id">
-        {(props) => {
-          return (
-            <TextField
-              required
-              fullWidth
-              label="Tax Id"
-              name={props.input.name}
-              onChange={props.input.onChange}
-              value={props.input.value}
-              sx={{
-                mt: 2,
-              }}
-            />
-          );
-        }}
-      </Field>
-
       <Field name="email">
         {(props) => {
           return (
@@ -134,23 +98,31 @@ export default function SignUpForm(props) {
           );
         }}
       </Field>
-      <span>{props.errors.confirm}</span>
-      <span>{props.errors.email}</span>
+
       <Box
         sx={{
           width: 1,
           textAlign: 'right',
         }}
       >
-        <Button
-          sx={{ mt: 2 }}
-          color="primary"
-          type="submit"
-          variant="contained"
-          size="large"
-        >
-          Sign Up
-        </Button>
+        <Box sx={{ mt: 2, textAlign: 'center' }}>
+          <Button
+            sx={{ mt: 2, textAlign: 'center' }}
+            color="primary"
+            type="submit"
+            variant="contained"
+            size="large"
+          >
+            Sign Up
+          </Button>
+        </Box>
+
+        <Box sx={{ mt: 2, textAlign: 'center' }}>
+          <span>{props.errors.confirm}</span>
+        </Box>
+        <Box sx={{ mt: 2, textAlign: 'center' }}>
+          <span>{props.errors.email}</span>
+        </Box>
       </Box>
     </Box>
   );
