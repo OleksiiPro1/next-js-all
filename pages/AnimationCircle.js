@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Cell, Pie, PieChart, Sector } from 'recharts';
 
+// https://recharts.org/en-US/examples/PieChartWithPaddingAngle
 const data = [{ name: 'Group A', value: 100 }];
 
 export default function MenuCircleProgress(props) {

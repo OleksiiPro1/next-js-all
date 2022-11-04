@@ -19,7 +19,7 @@ export default function Home() {
         <Link href="/hide-elements">
           <h2
             style={{
-              background: 'green',
+              background: 'red',
               cursor: 'pointer',
               textAlign: 'center',
               color: 'white',
@@ -45,22 +45,8 @@ export default function Home() {
             sign-up
           </h2>
         </Link>
-        <Link href="/login">
-          <h2
-            style={{
-              background: 'brown',
-              cursor: 'pointer',
-              textAlign: 'center',
-              color: 'white',
-              padding: 2,
-              margin: 2,
-            }}
-          >
-            login
-          </h2>
-        </Link>
 
-        <Link href="/my-account">
+        <Link href="/avatar">
           <h2
             style={{
               background: 'green',
@@ -71,7 +57,7 @@ export default function Home() {
               margin: 2,
             }}
           >
-            Account/Form/Grid/Upload Poto
+            Upload Poto
           </h2>
         </Link>
         <Grid container spacing={1}>

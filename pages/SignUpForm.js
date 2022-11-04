@@ -1,11 +1,12 @@
 import { Box, Button, TextField } from '@mui/material';
+import { DateTimePicker, LocalizationProvider } from '@mui/x-date-pickers';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import Link from 'next/link';
 import React from 'react';
 import { Field } from 'react-final-form';
 
 export default function SignUpForm(props) {
-  const { handleSubmit } = props;
-
+  const { handleSubmit, dirty } = props;
   return (
     <Box component="form" onSubmit={handleSubmit}>
       <Field name="first_name">
@@ -62,6 +63,26 @@ export default function SignUpForm(props) {
         }}
       </Field>
 
+      <Box
+        sx={{
+          mt: 2,
+        }}
+      >
+        <Field name="Date/Time">
+          {(props) => {
+            return (
+              <LocalizationProvider dateAdapter={AdapterDayjs}>
+                <DateTimePicker
+                  label="Date/Time picker"
+                  value={!dirty ? null : props.input.value}
+                  onChange={props.input.onChange}
+                  renderInput={(params) => <TextField {...params} fullWidth />}
+                />
+              </LocalizationProvider>
+            );
+          }}
+        </Field>
+      </Box>
       <Field name="password">
         {(props) => {
           return (
@@ -94,6 +115,25 @@ export default function SignUpForm(props) {
               value={props.input.value}
               sx={{
                 mt: 2,
+              }}
+            />
+          );
+        }}
+      </Field>
+
+      <Field name="Only-numbers">
+        {(props) => {
+          return (
+            <TextField
+              type={'number'}
+              required
+              fullWidth
+              label="Only-numbers"
+              name={props.input.name}
+              onChange={props.input.onChange}
+              value={props.input.value}
+              sx={{
+                mt: 1,
               }}
             />
           );
