@@ -62,7 +62,7 @@ export default function Home() {
         <Link href="/modal">
           <h2
             style={{
-              background: 'green',
+              background: 'black',
               cursor: 'pointer',
               textAlign: 'center',
               color: 'white',
@@ -77,7 +77,7 @@ export default function Home() {
         <Link href="/animation">
           <h2
             style={{
-              background: 'green',
+              background: 'brown',
               cursor: 'pointer',
               textAlign: 'center',
               color: 'white',
@@ -86,6 +86,21 @@ export default function Home() {
             }}
           >
             Animation
+          </h2>
+        </Link>
+
+        <Link href="/download">
+          <h2
+            style={{
+              background: 'green',
+              cursor: 'pointer',
+              textAlign: 'center',
+              color: 'white',
+              padding: 2,
+              margin: 2,
+            }}
+          >
+            Download
           </h2>
         </Link>
       </div>
