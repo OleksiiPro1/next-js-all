@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
+import LayoutExample from './layout/Layout';
 
 export default function Home() {
   return (
@@ -101,6 +102,21 @@ export default function Home() {
             }}
           >
             Download
+          </h2>
+        </Link>
+
+        <Link href="/hide-show-elements">
+          <h2
+            style={{
+              background: 'red',
+              cursor: 'pointer',
+              textAlign: 'center',
+              color: 'white',
+              padding: 2,
+              margin: 2,
+            }}
+          >
+            HideShow
           </h2>
         </Link>
       </div>
