@@ -5,7 +5,7 @@ export default function UpdateCardNumber(props) {
   const { handleSubmit, dirty } = props;
   return (
     <>
-      <Paper>
+      <Paper sx={{ overflowY: 'scroll', maxHeight: '300px' }}>
         <Grid container spacing={2} sx={{ pt: 2, pl: '10%', pr: '12%' }}>
           <Grid item xs={3}>
             <Paper
@@ -104,6 +104,11 @@ export default function UpdateCardNumber(props) {
             >
               Save
             </Button>
+            <h3>Text for scroll</h3>
+            <h3>Text for scroll</h3>
+            <h3>Text for scroll</h3>
+            <h3>Text for scroll</h3>
+            <h3>Text for scroll</h3>
           </Box>
         </Box>
       </Paper>
