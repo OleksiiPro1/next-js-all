@@ -18,7 +18,7 @@ export default function Home() {
         <Link href="/hide-elements">
           <h2
             style={{
-              background: 'red',
+              background: 'gray',
               cursor: 'pointer',
               textAlign: 'center',
               color: 'white',
@@ -33,7 +33,7 @@ export default function Home() {
         <Link href="/sign-up">
           <h2
             style={{
-              background: 'blue',
+              background: 'gray',
               cursor: 'pointer',
               textAlign: 'center',
               color: 'white',
@@ -48,7 +48,7 @@ export default function Home() {
         <Link href="/avatar">
           <h2
             style={{
-              background: 'green',
+              background: 'gray',
               cursor: 'pointer',
               textAlign: 'center',
               color: 'white',
@@ -63,7 +63,7 @@ export default function Home() {
         <Link href="/modal">
           <h2
             style={{
-              background: 'black',
+              background: 'gray',
               cursor: 'pointer',
               textAlign: 'center',
               color: 'white',
@@ -78,7 +78,7 @@ export default function Home() {
         <Link href="/animation">
           <h2
             style={{
-              background: 'brown',
+              background: 'gray',
               cursor: 'pointer',
               textAlign: 'center',
               color: 'white',
@@ -93,7 +93,7 @@ export default function Home() {
         <Link href="/download">
           <h2
             style={{
-              background: 'green',
+              background: 'gray',
               cursor: 'pointer',
               textAlign: 'center',
               color: 'white',
@@ -108,7 +108,7 @@ export default function Home() {
         <Link href="/hide-show-elements">
           <h2
             style={{
-              background: 'red',
+              background: 'gray',
               cursor: 'pointer',
               textAlign: 'center',
               color: 'white',
@@ -117,6 +117,51 @@ export default function Home() {
             }}
           >
             HideShow
+          </h2>
+        </Link>
+
+        <Link href="/onclickchange">
+          <h2
+            style={{
+              background: 'gray',
+              cursor: 'pointer',
+              textAlign: 'center',
+              color: 'white',
+              padding: 2,
+              margin: 2,
+            }}
+          >
+            Onclick Change
+          </h2>
+        </Link>
+
+        <Link href="/filtermap">
+          <h2
+            style={{
+              background: 'gray',
+              cursor: 'pointer',
+              textAlign: 'center',
+              color: 'white',
+              padding: 2,
+              margin: 2,
+            }}
+          >
+            Filter Map
+          </h2>
+        </Link>
+
+        <Link href="/delete_from_array">
+          <h2
+            style={{
+              background: 'gray',
+              cursor: 'pointer',
+              textAlign: 'center',
+              color: 'white',
+              padding: 2,
+              margin: 2,
+            }}
+          >
+            Delete From Array
           </h2>
         </Link>
       </div>

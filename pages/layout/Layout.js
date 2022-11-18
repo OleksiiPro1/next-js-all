@@ -6,6 +6,9 @@ export default function Layout(props) {
   return (
     <>
       <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, ml: '44%' }}>
+        <Link href="/">
+          <Button>Home</Button>
+        </Link>
         <Link href="/avatar">
           <Button>Avatar</Button>
         </Link>
