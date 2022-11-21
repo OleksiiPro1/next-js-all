@@ -179,6 +179,21 @@ export default function Home() {
             Delete From Array + props
           </h2>
         </Link>
+
+        <Link href="/hide-show-elements">
+          <h2
+            style={{
+              background: 'gray',
+              cursor: 'pointer',
+              textAlign: 'center',
+              color: 'white',
+              padding: 2,
+              margin: 2,
+            }}
+          >
+            hide-show-elements
+          </h2>
+        </Link>
       </div>
     </div>
   );
