@@ -1,8 +1,10 @@
 import Link from 'next/link';
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import LayoutExample from './layout/Layout';
 
 export default function Home() {
+  const [feedbackItems, setFeedbackItems] = useState([]);
+
   const emailInputRef = useRef();
   const feedbackInputRef = useRef();
   function submitFormHandler(event) {
@@ -20,6 +22,13 @@ export default function Home() {
       .then((response) => response.json())
       .then((data) => console.log(data));
   }
+
+  function loadFeedbackHundler() {
+    fetch('api/feedback')
+      .then((response) => response.json())
+      .then((data) => setFeedbackItems(data.feedback));
+  }
+
   return (
     <div>
       <div>
@@ -239,6 +248,13 @@ export default function Home() {
           </div>
           <button>Send Feedback</button>
         </form>
+        <hr />
+        <button onClick={loadFeedbackHundler}>Load Feedback</button>
+        <ul>
+          {feedbackItems.map((item) => (
+            <li key={item.id}>{item.text}</li>
+          ))}
+        </ul>
       </div>
     </div>
   );
