@@ -1,8 +1,25 @@
 import Link from 'next/link';
-import React from 'react';
+import React, { useRef } from 'react';
 import LayoutExample from './layout/Layout';
 
 export default function Home() {
+  const emailInputRef = useRef();
+  const feedbackInputRef = useRef();
+  function submitFormHandler(event) {
+    event.preventDefault();
+    const enteredEmail = emailInputRef.current.value;
+    const enteredFeedback = feedbackInputRef.current.value;
+    const reqBody = { email: enteredEmail, text: enteredFeedback };
+    fetch('api/feedback', {
+      method: 'POST',
+      body: JSON.stringify(reqBody),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => console.log(data));
+  }
   return (
     <div>
       <div>
@@ -194,6 +211,34 @@ export default function Home() {
             hide-show-elements
           </h2>
         </Link>
+
+        <Link href="/api/feedback">
+          <h2
+            style={{
+              background: 'gray',
+              cursor: 'pointer',
+              textAlign: 'center',
+              color: 'white',
+              padding: 2,
+              margin: 2,
+            }}
+          >
+            API
+          </h2>
+        </Link>
+        <form onSubmit={submitFormHandler}>
+          <div>
+            <label htmlFor="email">Email Address</label>
+            <br />
+            <input type="email" id="email" ref={emailInputRef} />
+          </div>
+          <div>
+            <label htmlFor="feedback">Feedback Address</label>
+            <br />
+            <textarea id="feedback" rows="5" ref={feedbackInputRef}></textarea>
+          </div>
+          <button>Send Feedback</button>
+        </form>
       </div>
     </div>
   );
