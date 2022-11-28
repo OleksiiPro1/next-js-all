@@ -255,6 +255,21 @@ export default function Home() {
             <li key={item.id}>{item.text}</li>
           ))}
         </ul>
+
+        <Link href="/promises">
+          <h2
+            style={{
+              background: 'gray',
+              cursor: 'pointer',
+              textAlign: 'center',
+              color: 'white',
+              padding: 2,
+              margin: 2,
+            }}
+          >
+            Promises
+          </h2>
+        </Link>
       </div>
     </div>
   );
