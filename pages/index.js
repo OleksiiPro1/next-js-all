@@ -270,6 +270,36 @@ export default function Home() {
             Promises
           </h2>
         </Link>
+
+        <Link href="/async-await">
+          <h2
+            style={{
+              background: 'gray',
+              cursor: 'pointer',
+              textAlign: 'center',
+              color: 'white',
+              padding: 2,
+              margin: 2,
+            }}
+          >
+            Async-await
+          </h2>
+        </Link>
+
+        <Link href="/children">
+          <h2
+            style={{
+              background: 'gray',
+              cursor: 'pointer',
+              textAlign: 'center',
+              color: 'white',
+              padding: 2,
+              margin: 2,
+            }}
+          >
+            Children
+          </h2>
+        </Link>
       </div>
     </div>
   );
