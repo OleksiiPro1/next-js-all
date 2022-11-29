@@ -18,7 +18,7 @@ export default function AxiosGet() {
       // выполняется всегда
     });
 
-  // POST
+  // POST Для добавления новой записи
   axios
     .post('https://reqres.in/api/users', {
       name: 'Alex777',
@@ -31,7 +31,7 @@ export default function AxiosGet() {
       console.log(error);
     });
 
-  // PUT
+  // PUT перезаписать запись
   axios
     .put('https://reqres.in/api/users/3', {
       name: 'Max222',
