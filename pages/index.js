@@ -315,6 +315,21 @@ export default function Home() {
             SWR
           </h2>
         </Link>
+
+        <Link href="/axios">
+          <h2
+            style={{
+              background: 'gray',
+              cursor: 'pointer',
+              textAlign: 'center',
+              color: 'white',
+              padding: 2,
+              margin: 2,
+            }}
+          >
+            Axios Get Post Put Delete
+          </h2>
+        </Link>
       </div>
     </div>
   );
