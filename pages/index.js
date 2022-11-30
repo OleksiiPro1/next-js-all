@@ -330,6 +330,50 @@ export default function Home() {
             Axios Get Post Put Delete
           </h2>
         </Link>
+
+        <Link href="/callback">
+          <h2
+            style={{
+              background: 'gray',
+              cursor: 'pointer',
+              textAlign: 'center',
+              color: 'white',
+              padding: 2,
+              margin: 2,
+            }}
+          >
+            Callback + Length
+          </h2>
+        </Link>
+        <Link href="/array">
+          <h2
+            style={{
+              background: 'gray',
+              cursor: 'pointer',
+              textAlign: 'center',
+              color: 'white',
+              padding: 2,
+              margin: 2,
+            }}
+          >
+            ArrayPage
+          </h2>
+        </Link>
+
+        <Link href="/json">
+          <h2
+            style={{
+              background: 'gray',
+              cursor: 'pointer',
+              textAlign: 'center',
+              color: 'white',
+              padding: 2,
+              margin: 2,
+            }}
+          >
+            JSON
+          </h2>
+        </Link>
       </div>
     </div>
   );
