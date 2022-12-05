@@ -389,6 +389,21 @@ export default function Home() {
             useEffect
           </h2>
         </Link>
+
+        <Link href="/fetch">
+          <h2
+            style={{
+              background: 'gray',
+              cursor: 'pointer',
+              textAlign: 'center',
+              color: 'white',
+              padding: 2,
+              margin: 2,
+            }}
+          >
+            Fetch and useEffect
+          </h2>
+        </Link>
       </div>
     </div>
   );
