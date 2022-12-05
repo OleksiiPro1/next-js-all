@@ -404,6 +404,21 @@ export default function Home() {
             Fetch and useEffect
           </h2>
         </Link>
+
+        <Link href="/postsarray">
+          <h2
+            style={{
+              background: 'gray',
+              cursor: 'pointer',
+              textAlign: 'center',
+              color: 'white',
+              padding: 2,
+              margin: 2,
+            }}
+          >
+            Posts Array
+          </h2>
+        </Link>
       </div>
     </div>
   );
