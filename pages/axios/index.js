@@ -59,7 +59,7 @@ export default function AxiosGet() {
     });
 
   {
-    /* PUT ============================= */
+    /* POST ============================= */
   }
   // const { accessToken } = useSelector((state) => state.authReducer);
   // const headers = computeHeaders(accessToken);
