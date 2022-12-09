@@ -32,6 +32,7 @@ export default function AxiosGet() {
     });
 
   // PUT перезаписать запись
+
   axios
     .put('https://reqres.in/api/users/3', {
       name: 'Max222',
@@ -56,4 +57,70 @@ export default function AxiosGet() {
     .catch(function (error) {
       console.log(error);
     });
+
+  {
+    /* PUT ============================= */
+  }
+  // const { accessToken } = useSelector((state) => state.authReducer);
+  // const headers = computeHeaders(accessToken);
+
+  // axios
+  // .post(
+  //   'http://localhost:3000/v1/users/',
+  //   {
+  //     ...formValues,
+  //   },
+  //   {
+  //     headers,
+  //   },
+  // )
+  // .then((res) => {
+  //   if (res.status === 403) {
+  //     // console.log('403 error!');
+  //     throw new Error('Request failed with status code 403');
+  //   }
+  //   // return res.json();
+  // })
+  // .catch((e) => {
+  //   console.log(e, 'Request failed with status code 403');
+  // })
+
+  /* GET ============================= */
+  // const { accessToken, userId, me } = useSelector((state) => state.authReducer);
+  // const headersLogo = computeMultipartHeaders(accessToken);
+
+  // axios
+  //     .get(url, {
+  //       headers: {
+  //         Authorization: `Bearer ${accessToken}`,
+  //       },
+  //     })
+  //     .then((res) => res.data);
+
+  // const { data, error } = useSWR(
+  //   `http://localhost:3000/v1/users/${userId}`,
+
+  //   fetcher,
+  // );
+
+  // if (error) return <div>failed to load</div>;
+  // if (!data) return <div>loading...</div>;
+
+  /* PUT ============================= */
+  // const { accessToken, userId, me } = useSelector((state) => state.authReducer);
+  // const headersLogo = computeMultipartHeaders(accessToken);
+
+  //   axios.put(
+  //     `http://localhost:3000/v1/users/${userId}`,
+  //     {
+  //       ...formValues,
+  //     },
+  //     {
+  //       headers: {
+  //         Authorization: `Bearer ${accessToken}`,
+  //       },
+  //     },
+  //   );
+  // };
+  return <div>Look axios/index.js</div>;
 }
