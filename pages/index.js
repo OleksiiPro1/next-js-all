@@ -419,6 +419,21 @@ export default function Home() {
             Posts Array
           </h2>
         </Link>
+
+        <Link href="/form-error">
+          <h2
+            style={{
+              background: 'gray',
+              cursor: 'pointer',
+              textAlign: 'center',
+              color: 'white',
+              padding: 2,
+              margin: 2,
+            }}
+          >
+            Form Errors Post
+          </h2>
+        </Link>
       </div>
     </div>
   );
