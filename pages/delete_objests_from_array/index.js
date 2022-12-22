@@ -18,13 +18,15 @@ import MenuComponents from './MenuComponents';
 
 export default function DeleteObjectsFromArray() {
   const [users, setUsers] = useState(employees);
-
+  console.log(employees, 'employees!!!');
   const deleteRow = (idRow) => {
     setUsers((state) => state.filter((name) => name.id !== idRow));
   };
-
-  const handleAddRow = (idRow) => {
-    // users.push(setUsers((state) => state.filter((name) => name.id !== idRow)));
+  const pushRow = (inputArray, newElement) => {
+    setUsers((state) => [...state, newElement]);
+  };
+  const handleAddRow = () => {
+    pushRow(employees, users[0]);
   };
 
   return (
