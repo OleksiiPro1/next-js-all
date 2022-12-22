@@ -434,6 +434,21 @@ export default function Home() {
             Form Errors Post
           </h2>
         </Link>
+
+        <Link href="/delete_objects_from_array">
+          <h2
+            style={{
+              background: 'gray',
+              cursor: 'pointer',
+              textAlign: 'center',
+              color: 'white',
+              padding: 2,
+              margin: 2,
+            }}
+          >
+            Add and delete objects from array
+          </h2>
+        </Link>
       </div>
     </div>
   );
