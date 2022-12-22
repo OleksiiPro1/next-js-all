@@ -1,0 +1,83 @@
+[
+  {
+    "id": 0,
+    "avatar": null,
+    "first_name": "Alexey",
+    "last_name": "Petrenko",
+    "roles": [
+      {
+        "name": "webDeveloper"
+      }
+    ],
+    "nrOfLeaningUnits": 10
+  },
+  {
+    "id": 1,
+    "avatar": null,
+    "first_name": "Chris",
+    "last_name": "Litvai",
+    "roles": [
+      {
+        "name": "manager"
+      }
+    ],
+    "nrOfLeaningUnits": 30
+  },
+  {
+    "id": 2,
+    "avatar": null,
+    "first_name": "Nikita",
+    "last_name": "Radchenko",
+    "roles": [
+      {
+        "name": "captain"
+      },
+      {
+        "name": "service lead"
+      }
+    ],
+    "nrOfLeaningUnits": 40
+  },
+  {
+    "id": 3,
+    "avatar": null,
+    "first_name": "Emil",
+    "last_name": "Skvirsky",
+    "roles": [
+      {
+        "name": "manager"
+      }
+    ],
+    "nrOfLeaningUnits": 60
+  },
+  {
+    "id": 4,
+    "avatar": null,
+    "first_name": "Rares",
+    "last_name": "Svorovsky",
+    "roles": [
+      {
+        "name": "office"
+      },
+      {
+        "name": "service"
+      }
+    ],
+    "nrOfLeaningUnits": 70
+  },
+  {
+    "id": 5,
+    "avatar": null,
+    "first_name": "Nemanja",
+    "last_name": "Brown",
+    "roles": [
+      {
+        "name": "office"
+      },
+      {
+        "name": "service"
+      }
+    ],
+    "nrOfLeaningUnits": 10
+  }
+]
