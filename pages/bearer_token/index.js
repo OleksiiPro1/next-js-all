@@ -15,20 +15,9 @@ import {
 import axios, { AxiosError } from 'axios';
 import { useState } from 'react';
 import useSWR from 'swr';
-import MenuComponents from './MenuComponents';
 
 export default function DeleteObjectsFromArray() {
   const [users, setUsers] = useState();
-
-  const deleteRow = (idRow) => {
-    setUsers((state) => state.filter((name) => name.id !== idRow));
-  };
-  const pushRow = (inputArray, newElement) => {
-    setUsers((state) => [...state, newElement]);
-  };
-  const handleAddRow = () => {
-    pushRow(employees, users[0]);
-  };
 
   const fetcher = (url, token) =>
     axios
@@ -73,14 +62,7 @@ export default function DeleteObjectsFromArray() {
                   sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                   hover
                 >
-                  <TableCell>
-                    <Avatar
-                      sx={{ bgcolor: 'customGreen.main' }}
-                      alt={row.name}
-                      src={row.avatar}
-                    />
-                  </TableCell>
-
+                  <TableCell />
                   <TableCell>
                     <Typography variant={'body2'}>{row.name}</Typography>
                   </TableCell>

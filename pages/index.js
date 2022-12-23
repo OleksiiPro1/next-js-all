@@ -449,6 +449,20 @@ export default function Home() {
             Add and delete objects from array
           </h2>
         </Link>
+        <Link href="/bearer_token">
+          <h2
+            style={{
+              background: 'gray',
+              cursor: 'pointer',
+              textAlign: 'center',
+              color: 'white',
+              padding: 2,
+              margin: 2,
+            }}
+          >
+            Bearer token - get
+          </h2>
+        </Link>
       </div>
     </div>
   );
