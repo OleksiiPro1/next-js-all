@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "companies": "KFC",
+    "location": "Serbia",
+    "quantity_of_restaurants": 601
+  },
+  {
+    "id": 2,
+    "companies": "Burger King ",
+    "location": "Romania",
+    "quantity_of_restaurants": 826
+  },
+  {
+    "id": 3,
+    "companies": "Mcdonald's",
+    "location": "Austria",
+    "quantity_of_restaurants": 427
+  },
+  {
+    "id": 4,
+    "companies": "KFC",
+    "location": "Ukraine",
+    "quantity_of_restaurants": 125
+  },
+  {
+    "id": 5,
+    "companies": "Burger King ",
+    "location": "USA",
+    "quantity_of_restaurants": 1824
+  },
+  {
+    "id": 6,
+    "companies": "Mcdonald's",
+    "location": "Canada",
+    "quantity_of_restaurants": 827
+  }
+]
