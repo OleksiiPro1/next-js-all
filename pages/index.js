@@ -463,6 +463,21 @@ export default function Home() {
             Bearer token - get
           </h2>
         </Link>
+
+        <Link href="/accounts_list">
+          <h2
+            style={{
+              background: 'gray',
+              cursor: 'pointer',
+              textAlign: 'center',
+              color: 'white',
+              padding: 2,
+              margin: 2,
+            }}
+          >
+            Accounts list
+          </h2>
+        </Link>
       </div>
     </div>
   );
