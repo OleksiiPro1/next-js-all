@@ -3,10 +3,16 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
-import React from 'react';
+import { useRouter } from 'next/router';
+import React, { useState } from 'react';
 import { Field } from 'react-final-form';
+import reports from './companies.json';
 
 const EmployeeForm = (props) => {
+  const [companies, setCompanies] = useState(reports);
+  const router = useRouter();
+  const { id } = router.query;
+
   const ITEM_HEIGHT = 48;
   const ITEM_PADDING_TOP = 8;
   const MenuProps = {
@@ -22,6 +28,7 @@ const EmployeeForm = (props) => {
   const { errorMessage } = props;
   const { data } = props;
   const { values } = props;
+  console.log(companies[0].companies, 'companies[0].companies');
   return (
     <Box component={'form'} onSubmit={handleSubmit}>
       <Box
@@ -40,7 +47,11 @@ const EmployeeForm = (props) => {
                   required
                   fullWidth
                   name={props.input.name}
-                  // defaultValue={data.company}
+                  defaultValue={
+                    companies.filter((data) => {
+                      return data.id == id;
+                    })[0].companies
+                  }
                   onChange={props.input.onChange}
                   disabled={loading}
                   InputLabelProps={{
@@ -62,7 +73,11 @@ const EmployeeForm = (props) => {
                   required
                   fullWidth
                   name={props.input.name}
-                  value={props.input.value}
+                  defaultValue={
+                    companies.filter((data) => {
+                      return data.id == id;
+                    })[0].location
+                  }
                   onChange={props.input.onChange}
                   disabled={loading}
                   InputLabelProps={{
@@ -84,7 +99,11 @@ const EmployeeForm = (props) => {
                   required
                   fullWidth
                   name={props.input.name}
-                  // defaultValue={data.company}
+                  defaultValue={
+                    companies.filter((data) => {
+                      return data.id == id;
+                    })[0].quantity_of_restaurants
+                  }
                   onChange={props.input.onChange}
                   disabled={loading}
                   InputLabelProps={{

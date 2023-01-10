@@ -6,8 +6,6 @@ import { useSelector } from 'react-redux';
 import useSWR from 'swr';
 import EmployeeForm from './EmployeeForm';
 
-// import employees from '../../assets/mockData/employees.json';
-
 const EmployeeId = (props) => {
   const router = useRouter();
   const { id } = router.query;
