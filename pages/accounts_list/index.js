@@ -23,11 +23,16 @@ export default function AccountsOverviewPage() {
   const [companies, setCompanies] = useState(reports);
   const [open, setOpen] = useState(false);
   const router = useRouter();
+  const [users, setUsers] = useState(reports);
   const handleClose = () => {
     setOpen(false);
   };
   const editRow = (idRow) => {
     router.push(`/accounts_list/${idRow}`);
+  };
+
+  const deleteUsersRow = (id) => {
+    setCompanies((state) => state.filter((data) => data.id !== id));
   };
 
   return (
@@ -73,8 +78,10 @@ export default function AccountsOverviewPage() {
 
                     <TableCell align={'right'}>
                       <MenuComponents
+                        handleClose={handleClose}
                         reports={reports}
                         editRow={() => editRow(row.id)}
+                        deleteUsersRow={() => deleteUsersRow(row.id)}
                       />
                     </TableCell>
                   </TableRow>

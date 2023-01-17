@@ -475,7 +475,8 @@ export default function Home() {
               margin: 2,
             }}
           >
-            Accounts list
+            Accounts list <br />
+            map + filter
           </h2>
         </Link>
       </div>
