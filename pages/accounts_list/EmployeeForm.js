@@ -1,6 +1,7 @@
 import CheckIcon from '@mui/icons-material/Check';
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 import {
+  Autocomplete,
   CircularProgress,
   InputAdornment,
   Modal,
@@ -16,6 +17,14 @@ import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import { Field } from 'react-final-form';
 import reports from './companies.json';
+
+const countries = [
+  { code: 'UA', label: 'Ukraine', phone: '380' },
+  { code: 'US', label: 'USA', phone: '1' },
+  { code: 'DE', label: 'Germany', phone: '49' },
+  { code: 'FR', label: 'France', phone: '33' },
+  { code: 'AT', label: 'Austria', phone: '43' },
+];
 
 const EmployeeForm = (props) => {
   const [nameCondition, setNameCondition] = useState(true);
@@ -81,6 +90,10 @@ const EmployeeForm = (props) => {
                     ),
                     sx: {
                       color: 'primary.main',
+                      // disabled color - black
+                      '& .Mui-disabled': {
+                        '-webkitTextFillColor': 'black !important',
+                      },
                     },
                   }}
                 />
@@ -230,8 +243,8 @@ const EmployeeForm = (props) => {
                       sx={{
                         mt: 2,
                         pr: 2,
-                        '.Mui-disabled': {
-                          color: 'black',
+                        '& .Mui-disabled': {
+                          '-webkitTextFillColor': 'black !important',
                         },
                       }}
                       required
@@ -250,6 +263,56 @@ const EmployeeForm = (props) => {
                 }}
               </Field>
             </Item>
+
+            <Box sx={{ pl: 5, pr: 2 }}>
+              <Field name="Country Select">
+                {(props) => {
+                  return (
+                    <Autocomplete
+                      id="country-select-demo"
+                      sx={{
+                        width: '100%',
+                        '& .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root': {
+                          color: 'black !important',
+                        },
+                      }}
+                      options={countries}
+                      autoHighlight
+                      getOptionLabel={(option) => option.label}
+                      renderOption={(props, option) => (
+                        <Box
+                          component="li"
+                          sx={{
+                            '& > img': { mr: 2, flexShrink: 0 },
+                          }}
+                          {...props}
+                        >
+                          <img
+                            loading="lazy"
+                            width="20"
+                            src={`https://flagcdn.com/w20/${option.code.toLowerCase()}.png`}
+                            srcSet={`https://flagcdn.com/w40/${option.code.toLowerCase()}.png 2x`}
+                            alt=""
+                          />
+                          {option.label} ({option.code}) +{option.phone}
+                        </Box>
+                      )}
+                      renderInput={(params) => (
+                        <TextField
+                          {...params}
+                          label="Choose a country"
+                          inputProps={{
+                            ...params.inputProps,
+                            autoComplete: 'new-password', // disable autocomplete and autofill
+                          }}
+                        />
+                      )}
+                    />
+                  );
+                }}
+              </Field>
+            </Box>
+
             <Box
               sx={{
                 width: 1,
